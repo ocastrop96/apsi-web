@@ -62,63 +62,8 @@ session_start();
 </head>
 
 <body class="hold-transition">
-
----------------------------
-Save Changes?
----------------------------
-New file has been modified, save changes?
----------------------------
-Sí   No   Cancelar   
----------------------------
-
   <!-- Validación de Login -->
-  <!-- <?php
-  if (isset($_SESSION["loginWS"]) && $_SESSION["loginWS"] == "ok") {
-    echo '<div class="wrapper">';
-    // Cabecera Principal
-    include('pages/cabecera.php');
-    // Menú Principal
-    include('pages/menu.php');
-    if (isset($_GET["ruta"])) {
-      // Rutas dinámicas
-      if (
-        $_GET["ruta"] == "inicio" ||
-        $_GET["ruta"] == "usuarios" ||
-        $_GET["ruta"] == "dashboard" ||
-        $_GET["ruta"] == "oficinas" ||
-        $_GET["ruta"] == "servicios" ||
-        $_GET["ruta"] == "diagnosticos" ||
-        $_GET["ruta"] == "integracion-ec" ||
-        $_GET["ruta"] == "integracion-ep" ||
-        $_GET["ruta"] == "integracion-er" ||
-        $_GET["ruta"] == "equipos-computo" ||
-        $_GET["ruta"] == "equipos-redes" ||
-        $_GET["ruta"] == "equipos-otros" ||
-        $_GET["ruta"] == "mantenimientos" ||
-        $_GET["ruta"] == "registrar-mantenimiento" ||
-        $_GET["ruta"] == "editar-mantenimiento" ||
-        $_GET["ruta"] == "reposicion" ||
-        $_GET["ruta"] == "cableados" ||
-        $_GET["ruta"] == "categorias" ||
-        $_GET["ruta"] == "acciones" ||
-        $_GET["ruta"] == "responsables" ||
-        $_GET["ruta"] == "logout"
-      ) {
-        include "pages/" . $_GET["ruta"] . ".php";
-      } else {
-        include "pages/404.php";
-      }
-    } else {
-      include "pages/inicio.php";
-    }
-    // Pie de página
-    include('pages/pie.php');
-    echo '</div>';
-  } else {
-    include "pages/login.php";
-  }
-
-  ?> -->
+  
   <!-- Scripts JS Propios -->
   <script type="text/javascript" src="views/dist/js/main.js"></script>
   <script type="text/javascript" src="views/dist/js/oficinas-departamentos.js"></script>
