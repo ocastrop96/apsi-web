@@ -1,6 +1,3 @@
-<?php
-session_start();
-?>
 <!DOCTYPE html>
 <html>
 
@@ -63,7 +60,24 @@ session_start();
 
 <body class="hold-transition">
   <!-- Validación de Login -->
-  
+  <?php
+  echo '<div class="wrapper">';
+  include "pages/cabecera.php";
+
+  if (isset($_GET["ruta"])) {
+
+    if ($_GET["ruta"] == "registro-acompanamiento") {
+
+      include "pages/" . $_GET["ruta"] . ".php";
+    } else {
+      include "pages/404.php";
+    }
+  } else {
+    include "pages/registro-acompanamiento.php";
+  }
+  include "pages/pie.php";
+  echo '</div>';
+  ?>
   <!-- Scripts JS Propios -->
   <script type="text/javascript" src="views/dist/js/main.js"></script>
   <script type="text/javascript" src="views/dist/js/oficinas-departamentos.js"></script>
