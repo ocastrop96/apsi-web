@@ -79,7 +79,7 @@
   echo '</div>';
   ?>
   <!-- Scripts JS Propios -->
-  <script type="text/javascript" src="views/dist/js/main.js"></script>
+  <!-- <script type="text/javascript" src="views/dist/js/main.js"></script>
   <script type="text/javascript" src="views/dist/js/oficinas-departamentos.js"></script>
   <script type="text/javascript" src="views/dist/js/servicios.js"></script>
   <script type="text/javascript" src="views/dist/js/usuarios.js"></script>
@@ -96,8 +96,7 @@
   <script type="text/javascript" src="views/dist/js/mantenimientos.js"></script>
   <!-- <script type="text/javascript" src="views/dist/js/code.min.js"></script> -->
 
-  <script type="text/javascript" src="views/dist/js/reposicion.js"></script>
-  <script type="text/javascript" src="views/dist/js/cableados.js"></script>
+  <!-- <script type="text/javascript" src="views/dist/js/reposicion.js"></script>
+  <script type="text/javascript" src="views/dist/js/cableados.js"></script> --> -->
 </body>
-
 </html>
