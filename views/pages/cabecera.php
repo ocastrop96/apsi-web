@@ -1,10 +1,4 @@
 <div class="container">
-    <!-- <div class="row mb-2 mt-4 align-items-center">
-        <div class="col-12">
-            <img src="views/dist/img/banner.png" width="200" height="60" class="float-left img-fluid" alt="logo-libro-reclamos-hnseb">
-            <img src="views/dist/img/susalud.png" width="250" height="60" class="float-right img-fluid my-5" alt="logo-susalud">
-        </div>
-    </div> -->
     <div class="row align-items-center mt-5">
         <div class="col-sm-12 col-md-12 col-12">
             <div class="callout callout-info">

@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="views/plugins/fontawesome-free/css/all.min.css">
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <link rel="stylesheet" href="views/dist/css/adminlte.css">
+  <link rel="stylesheet" href="views/dist/css/loader.css">
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
   <link rel="stylesheet" href="views/plugins/datatables-bs4/css/dataTables.bootstrap4.css">
   <link rel="stylesheet" href="views/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
@@ -53,13 +54,13 @@
   <!-- InputMask -->
   <script src="views/plugins/moment/moment.min.js"></script>
   <script src="views/plugins/inputmask/jquery.inputmask.min.js"></script>
-
-
-
 </head>
 
 <body class="hold-transition">
-  <!-- Validación de Login -->
+  <div class="contenedor_loader">
+        <div class="loader">
+        </div>
+    </div>
   <?php
   echo '<div class="wrapper">';
   include "pages/cabecera.php";
@@ -78,8 +79,8 @@
   include "pages/pie.php";
   echo '</div>';
   ?>
-  <!-- Scripts JS Propios -->
-  <!-- <script type="text/javascript" src="views/dist/js/main.js"></script>
+   <script type="text/javascript" src="views/dist/js/registro.js"></script>
+   <!--
   <script type="text/javascript" src="views/dist/js/oficinas-departamentos.js"></script>
   <script type="text/javascript" src="views/dist/js/servicios.js"></script>
   <script type="text/javascript" src="views/dist/js/usuarios.js"></script>
@@ -97,6 +98,6 @@
   <!-- <script type="text/javascript" src="views/dist/js/code.min.js"></script> -->
 
   <!-- <script type="text/javascript" src="views/dist/js/reposicion.js"></script>
-  <script type="text/javascript" src="views/dist/js/cableados.js"></script> --> -->
+  <script type="text/javascript" src="views/dist/js/cableados.js"></script> -->
 </body>
 </html>
