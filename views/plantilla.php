@@ -80,6 +80,8 @@
   echo '</div>';
   ?>
    <script type="text/javascript" src="views/dist/js/registro.js"></script>
+   <script type="text/javascript" src="views/dist/js/regCore.js"></script>
+
    <!--
   <script type="text/javascript" src="views/dist/js/oficinas-departamentos.js"></script>
   <script type="text/javascript" src="views/dist/js/servicios.js"></script>

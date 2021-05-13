@@ -61,6 +61,7 @@ $("#radioCom2").prop("checked", true);
 $("#comFami").val("NO");
 // Selecciona tipo seguimiento
 $("#tipSeg").on("change", function () {
+    // $("#tipSeg").prop("disabled", true);
     let comboTipSeg = $(this).val();
     if (comboTipSeg > 0) {
         if (comboTipSeg == 1 || comboTipSeg == 2) {
@@ -77,6 +78,7 @@ $("#tipSeg").on("change", function () {
     else {
         $("#radioCom2").prop("checked", true);
         $("#comFami").val("NO");
+        $("#radioCom2").prop("checked", true);
         $("#bloqueComFam").addClass("d-none");
     }
 });
@@ -122,9 +124,9 @@ $.validator.addMethod(
 );
 
 $("#btnRegistraSeg").on("click", function () {
-    var TipSeg = $("#tipSeg").val();
+    var tipoS = $("#tipSeg").val();
 
-    if (TipSeg == 1 || TipSeg == 2) {
+    if (tipoS == 1) {
         $("#formSeguimiento").validate({
             rules: {
                 profPsi: {
@@ -133,16 +135,215 @@ $("#btnRegistraSeg").on("click", function () {
                 ndocpac: {
                     required: true,
                 },
-                nhispac : {
+                nhispac: {
                     required: true,
                 },
-                nombApPac  : {
+                nombApPac: {
                     required: true,
                 },
                 sexPac: {
                     valueNotEquals: "0",
                 },
-                edadPac  : {
+                edadPac: {
+                    required: true,
+                },
+                diagpac1: {
+                    valueNotEquals: "0",
+                },
+                ndocfam: {
+                    required: true,
+                },
+                nombApFam: {
+                    required: true,
+                },
+                parentFam: {
+                    valueNotEquals: "0",
+                },
+                sexFam: {
+                    valueNotEquals: "0",
+                },
+
+                edadFam: {
+                    required: true,
+                },
+                diag1Fam: {
+                    valueNotEquals: "0",
+                },
+            },
+            messages: {
+                profPsi: {
+                    valueNotEquals: "Seleccione Profesional Psicologo",
+                },
+                ndocpac: {
+                    required: "Ingresa N° Documento del Paciente",
+                },
+                nhispac: {
+                    required: "Ingresa N° Historia del Paciente",
+                },
+                nombApPac: {
+                    required: "Ingresa Nombres y Apellidos de Paciente",
+                },
+                sexPac: {
+                    valueNotEquals: "Seleccione Sexo del Paciente",
+                },
+                edadPac: {
+                    required: "Ingresa Nombres y Apellidos de Paciente",
+                },
+                diagpac1: {
+                    valueNotEquals: "Seleccione al menos un diagnóstico para el paciente",
+                },
+                ndocfam: {
+                    required: "Ingrese N° Documento de familiar",
+                },
+                nombApFam: {
+                    required: "Ingrese Nombres y Apellidos de familiar",
+                },
+                parentFam: {
+                    valueNotEquals: "Seleccione Parentesco",
+                },
+                sexFam: {
+                    valueNotEquals: "Seleccione Sexo de familiar",
+                },
+
+                edadFam: {
+                    required: "Ingrese edad del familiar",
+                },
+                diag1Fam: {
+                    valueNotEquals: "Seleccione al menos un diagnóstico para el familiar",
+                },
+            },
+            errorElement: "span",
+            errorPlacement: function (error, element) {
+                error.addClass("invalid-feedback");
+                element.closest(".form-group").append(error);
+            },
+            highlight: function (element, errorClass, validClass) {
+                $(element).addClass("is-invalid");
+            },
+            unhighlight: function (element, errorClass, validClass) {
+                $(element).removeClass("is-invalid");
+            },
+        });
+    }
+    else if (tipoS == 2) {
+        $("#formSeguimiento").validate({
+            rules: {
+                profPsi: {
+                    valueNotEquals: "0",
+                },
+                ndocpac: {
+                    required: true,
+                },
+                nhispac: {
+                    required: true,
+                },
+                nombApPac: {
+                    required: true,
+                },
+                sexPac: {
+                    valueNotEquals: "0",
+                },
+                edadPac: {
+                    required: true,
+                },
+                diagpac1: {
+                    valueNotEquals: "0",
+                },
+                ndocfam: {
+                    required: true,
+                },
+                nombApFam: {
+                    required: true,
+                },
+                parentFam: {
+                    valueNotEquals: "0",
+                },
+                sexFam: {
+                    valueNotEquals: "0",
+                },
+
+                edadFam: {
+                    required: true,
+                },
+                diag1Fam: {
+                    valueNotEquals: "0",
+                },
+            },
+            messages: {
+                profPsi: {
+                    valueNotEquals: "Seleccione Profesional Psicologo",
+                },
+                ndocpac: {
+                    required: "Ingresa N° Documento del Paciente",
+                },
+                nhispac: {
+                    required: "Ingresa N° Historia del Paciente",
+                },
+                nombApPac: {
+                    required: "Ingresa Nombres y Apellidos de Paciente",
+                },
+                sexPac: {
+                    valueNotEquals: "Seleccione Sexo del Paciente",
+                },
+                edadPac: {
+                    required: "Ingresa Nombres y Apellidos de Paciente",
+                },
+                diagpac1: {
+                    valueNotEquals: "Seleccione al menos un diagnóstico para el paciente",
+                },
+                ndocfam: {
+                    required: "Ingrese N° Documento de familiar",
+                },
+                nombApFam: {
+                    required: "Ingrese Nombres y Apellidos de familiar",
+                },
+                parentFam: {
+                    valueNotEquals: "Seleccione Parentesco",
+                },
+                sexFam: {
+                    valueNotEquals: "Seleccione Sexo de familiar",
+                },
+
+                edadFam: {
+                    required: "Ingrese edad del familiar",
+                },
+                diag1Fam: {
+                    valueNotEquals: "Seleccione al menos un diagnóstico para el familiar",
+                },
+            },
+            errorElement: "span",
+            errorPlacement: function (error, element) {
+                error.addClass("invalid-feedback");
+                element.closest(".form-group").append(error);
+            },
+            highlight: function (element, errorClass, validClass) {
+                $(element).addClass("is-invalid");
+            },
+            unhighlight: function (element, errorClass, validClass) {
+                $(element).removeClass("is-invalid");
+            },
+        });
+    }
+    else if (TipSeg == 3) {
+        $("#tipSeg").prop("disabled", false);
+        $("#formSeguimiento").validate({
+            rules: {
+                profPsi: {
+                    valueNotEquals: "0",
+                },
+                ndocpac: {
+                    required: true,
+                },
+                nhispac: {
+                    required: true,
+                },
+                nombApPac: {
+                    required: true,
+                },
+                sexPac: {
+                    valueNotEquals: "0",
+                },
+                edadPac: {
                     required: true,
                 },
                 diagpac1: {
@@ -156,16 +357,16 @@ $("#btnRegistraSeg").on("click", function () {
                 ndocpac: {
                     required: "Ingresa N° Documento del Paciente",
                 },
-                nhispac : {
+                nhispac: {
                     required: "Ingresa N° Historia del Paciente",
                 },
-                nombApPac  : {
+                nombApPac: {
                     required: "Ingresa Nombres y Apellidos de Paciente",
                 },
                 sexPac: {
                     valueNotEquals: "Seleccione Sexo del Paciente",
                 },
-                edadPac  : {
+                edadPac: {
                     required: "Ingresa Nombres y Apellidos de Paciente",
                 },
                 diagpac1: {
@@ -185,10 +386,69 @@ $("#btnRegistraSeg").on("click", function () {
             },
         });
     }
-    else if(TipSeg == 3 || TipSeg == 4){
-
+    else if (TipSeg == 4) {
+        $("#tipSeg").prop("disabled", false);
+        $("#formSeguimiento").validate({
+            rules: {
+                profPsi: {
+                    valueNotEquals: "0",
+                },
+                ndocpac: {
+                    required: true,
+                },
+                nhispac: {
+                    required: true,
+                },
+                nombApPac: {
+                    required: true,
+                },
+                sexPac: {
+                    valueNotEquals: "0",
+                },
+                edadPac: {
+                    required: true,
+                },
+                diagpac1: {
+                    valueNotEquals: "0",
+                },
+            },
+            messages: {
+                profPsi: {
+                    valueNotEquals: "Seleccione Profesional Psicologo",
+                },
+                ndocpac: {
+                    required: "Ingresa N° Documento del Paciente",
+                },
+                nhispac: {
+                    required: "Ingresa N° Historia del Paciente",
+                },
+                nombApPac: {
+                    required: "Ingresa Nombres y Apellidos de Paciente",
+                },
+                sexPac: {
+                    valueNotEquals: "Seleccione Sexo del Paciente",
+                },
+                edadPac: {
+                    required: "Ingresa Nombres y Apellidos de Paciente",
+                },
+                diagpac1: {
+                    valueNotEquals: "Seleccione al menos un diagnóstico",
+                },
+            },
+            errorElement: "span",
+            errorPlacement: function (error, element) {
+                error.addClass("invalid-feedback");
+                element.closest(".form-group").append(error);
+            },
+            highlight: function (element, errorClass, validClass) {
+                $(element).addClass("is-invalid");
+            },
+            unhighlight: function (element, errorClass, validClass) {
+                $(element).removeClass("is-invalid");
+            },
+        });
     }
-    else{
+    else {
         $("#formSeguimiento").validate({
             rules: {
                 tipSeg: {
@@ -200,17 +460,46 @@ $("#btnRegistraSeg").on("click", function () {
                 ndocpac: {
                     required: true,
                 },
-                
+                nhispac: {
+                    required: true,
+                },
+                nombApPac: {
+                    required: true,
+                },
+                sexPac: {
+                    valueNotEquals: "0",
+                },
+                edadPac: {
+                    required: true,
+                },
+                diagpac1: {
+                    valueNotEquals: "0",
+                },
             },
             messages: {
                 tipSeg: {
-                    valueNotEquals: "Seleccione Tipo de Seguimiento",
+                    valueNotEquals: "Seleccione tipo de Seguimiento",
                 },
                 profPsi: {
                     valueNotEquals: "Seleccione Profesional Psicologo",
                 },
                 ndocpac: {
-                    required: "Ingresa tu N° Documento Paciente",
+                    required: "Ingresa N° Documento del Paciente",
+                },
+                nhispac: {
+                    required: "Ingresa N° Historia del Paciente",
+                },
+                nombApPac: {
+                    required: "Ingresa Nombres y Apellidos de Paciente",
+                },
+                sexPac: {
+                    valueNotEquals: "Seleccione Sexo del Paciente",
+                },
+                edadPac: {
+                    required: "Ingresa Nombres y Apellidos de Paciente",
+                },
+                diagpac1: {
+                    valueNotEquals: "Seleccione al menos un diagnóstico",
                 },
             },
             errorElement: "span",
@@ -227,5 +516,4 @@ $("#btnRegistraSeg").on("click", function () {
         });
     }
 });
-
 // Validacion de campos de formulario
