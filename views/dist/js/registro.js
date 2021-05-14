@@ -324,7 +324,7 @@ $("#btnRegistraSeg").on("click", function () {
             },
         });
     }
-    else if (TipSeg == 3) {
+    else if (tipoS == 3) {
         $("#tipSeg").prop("disabled", false);
         $("#formSeguimiento").validate({
             rules: {
@@ -386,7 +386,7 @@ $("#btnRegistraSeg").on("click", function () {
             },
         });
     }
-    else if (TipSeg == 4) {
+    else if (tipoS == 4) {
         $("#tipSeg").prop("disabled", false);
         $("#formSeguimiento").validate({
             rules: {
@@ -517,3 +517,52 @@ $("#btnRegistraSeg").on("click", function () {
     }
 });
 // Validacion de campos de formulario
+// Envío de datos vía ajax
+$(".btnRegistraSeg").click(function (e) {
+    e.preventDefault();
+    var form1 = $("#formSeguimiento");
+    validacion = form1.valid();
+    if (validacion == true) {
+        var data = $("#formSeguimiento").serialize();
+        $.ajax({
+            method: "POST",
+            url: "core/registrarSeguimiento.php",
+            data: data,
+            success: function (e) {
+                if (e == 1) {
+                    Swal.fire({
+                        icon: "success",
+                        title:
+                            "Registro Exitoso!",
+                        showConfirmButton: false,
+                        timer: 1700,
+                    });
+                    document.getElementById("formSeguimiento").reset();
+                    $("#radioCom1").prop("checked", false);
+                    $("#radioCom2").prop("checked", true);
+                    $("#comFami").val("NO");
+                    $("#bloqueComFam").addClass("d-none");
+                } else {
+                    Swal.fire({
+                        type: "error",
+                        title:
+                            "Error al registrar, ingrese correctamente los datos. Aségurese de completar todos los campos requeridos",
+                        showConfirmButton: false,
+                        timer: 1700,
+                    });
+                }
+            },
+        });
+        // alert(data);
+    }
+    else {
+        Swal.fire({
+            icon: "error",
+            title:
+                "Error al registrar, ingrese correctamente los datos. Aségurese de completar todos los campos requeridos",
+            showConfirmButton: false,
+            timer: 1500,
+        });
+    }
+});
+    // Envío de datos vía ajax

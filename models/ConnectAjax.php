@@ -1,7 +1,7 @@
 <?php
 $server = "localhost";
-$user = "root";
-$pass = "";
+$user = "apsi-admin";
+$pass = "d_&Eu()VD#b74!(";
 $db = "apsi-web";
 $conexion = mysqli_connect($server, $user, $pass, $db);
 mysqli_set_charset($conexion, "utf8");

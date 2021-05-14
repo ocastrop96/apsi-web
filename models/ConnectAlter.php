@@ -1,8 +1,8 @@
 <?php
 //db details
 $dbHost = 'localhost';
-$dbUsername = 'root';
-$dbPassword = '';
+$dbUsername = 'apsi-admin';
+$dbPassword = 'd_&Eu()VD#b74!(';
 $dbName = 'apsi-web';
 
 //Connect and select the database

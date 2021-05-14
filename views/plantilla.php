@@ -58,48 +58,31 @@
 
 <body class="hold-transition">
   <div class="contenedor_loader">
-        <div class="loader">
-        </div>
+    <div class="loader">
     </div>
+  </div>
   <?php
   echo '<div class="wrapper">';
   include "pages/cabecera.php";
 
   if (isset($_GET["ruta"])) {
 
-    if ($_GET["ruta"] == "registro-acompanamiento") {
-
+    if (
+      $_GET["ruta"] == "registro-acompanamiento" ||
+      $_GET["ruta"] == "reportes" ||
+      $_GET["ruta"] == "index"
+    ) {
       include "pages/" . $_GET["ruta"] . ".php";
     } else {
       include "pages/404.php";
     }
   } else {
-    include "pages/registro-acompanamiento.php";
+    include "pages/index.php";
   }
   include "pages/pie.php";
   echo '</div>';
   ?>
-   <script type="text/javascript" src="views/dist/js/registro.js"></script>
-   <script type="text/javascript" src="views/dist/js/regCore.js"></script>
-
-   <!--
-  <script type="text/javascript" src="views/dist/js/oficinas-departamentos.js"></script>
-  <script type="text/javascript" src="views/dist/js/servicios.js"></script>
-  <script type="text/javascript" src="views/dist/js/usuarios.js"></script>
-  <script type="text/javascript" src="views/dist/js/diagnosticos.js"></script>
-  <script type="text/javascript" src="views/dist/js/acciones.js"></script>
-  <script type="text/javascript" src="views/dist/js/responsables.js"></script>
-  <script type="text/javascript" src="views/dist/js/categorias.js"></script>
-  <script type="text/javascript" src="views/dist/js/equipos-computo.js"></script>
-  <script type="text/javascript" src="views/dist/js/equipos-redes.js"></script>
-  <script type="text/javascript" src="views/dist/js/equipos-otros.js"></script>
-  <script type="text/javascript" src="views/dist/js/integra-ec.js"></script>
-  <script type="text/javascript" src="views/dist/js/integra-ep.js"></script>
-  <script type="text/javascript" src="views/dist/js/integra-er.js"></script>
-  <script type="text/javascript" src="views/dist/js/mantenimientos.js"></script>
-  <!-- <script type="text/javascript" src="views/dist/js/code.min.js"></script> -->
-
-  <!-- <script type="text/javascript" src="views/dist/js/reposicion.js"></script>
-  <script type="text/javascript" src="views/dist/js/cableados.js"></script> -->
+  <script type="text/javascript" src="views/dist/js/registro.js"></script>
 </body>
+
 </html>

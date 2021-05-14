@@ -1,4 +1,9 @@
 <div class="container">
+    <div class="row mb-3">
+        <div class="col-sm-12 col-md-12 col-12">
+            <span class="text-danger font-weight-bold">(*) Completa correctamente los campos requeridos en el formulario.</span>
+        </div>
+    </div>
     <form action="" method="post" id="formSeguimiento">
         <div class="card card-olive">
             <div class="card-header">
@@ -171,12 +176,12 @@
                     <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
                         <div class="input-group">
                             <div class="icheck-dark d-inline">
-                                <input type="radio" id="radioCom1" name="comFam">
+                                <input type="radio" id="radioCom1" name="comFam" value="SI">
                                 <label for="radiorep1"> SI
                                 </label>&nbsp;&nbsp;
                             </div>
                             <div class="icheck-dark d-inline">
-                                <input type="radio" id="radioCom2" name="comFam">
+                                <input type="radio" id="radioCom2" name="comFam" value="NO">
                                 <label for="radiorep2"> NO
                                 </label>
                             </div>
@@ -296,7 +301,7 @@
             </div>
         </div>
         <center>
-            <button type="btn" class="btn btn-success btn-lg mb-3" id="btnRegistraSeg">REGISTRAR</button>
+            <button type="btn" class="btn btn-success btn-lg mb-3 btnRegistraSeg" id="btnRegistraSeg">REGISTRAR</button>
         </center>
     </form>
 </div>
