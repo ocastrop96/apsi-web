@@ -1,11 +1,11 @@
 <div class="container">
-    <div class="card card-olive">
+    <!-- <div class="card card-olive">
         <div class="card-header">
             <h5 class="card-title m-0 font-weight-bold">Cuadro General </h5>&nbsp;&nbsp;<i class="fas fa-chart-area"></i>
         </div>
         <div class="card-body">
             <div class="row">
-                <!-- <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
                     <div class="form-group">
                         <label for="tipSeg"> Tipo de Seguimiento:<span class="text-danger">&nbsp;*</span></label>
                         <div class="input-group">
@@ -43,7 +43,32 @@
                             </select>
                         </div>
                     </div>
-                </div> -->
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <div class="card card-info">
+        <div class="card-header">
+            <h5 class="card-title m-0 font-weight-bold">Reporte de Acompañamiento Psicológico </h5>&nbsp;&nbsp;<i class="fas fa-brain"></i>
+            <span class="text-light font-weight-bold"> || Nota: Selecciona un rango de fechas a consultar</span>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                    <div class="form-group">
+                        <label>Selecciona un rango de fecha:</label>
+
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <i class="far fa-calendar-alt"></i>
+                                </span>
+                            </div>
+                            <input type="text" class="form-control float-right" id="reservation">
+                        </div>
+                        <!-- /.input group -->
+                    </div>
+                </div>
             </div>
         </div>
     </div>

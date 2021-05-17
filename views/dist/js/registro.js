@@ -57,8 +57,8 @@ $("#nombApFam").change(function () {
     $("#nombApFam").val(rechange1);
 });
 // CAMPOS INICIALES
-$("#radioCom2").prop("checked", true);
-$("#comFami").val("NO");
+// $("#radioCom2").prop("checked", true);
+// $("#comFami").val("NO");
 // Selecciona tipo seguimiento
 $("#tipSeg").on("change", function () {
     // $("#tipSeg").prop("disabled", true);
@@ -66,23 +66,61 @@ $("#tipSeg").on("change", function () {
     if (comboTipSeg > 0) {
         if (comboTipSeg == 1 || comboTipSeg == 2) {
             $("#bloqueComFam").removeClass("d-none");
-            $("#radioCom1").prop("checked", true);
+            $("#comSi").prop("checked", true);
             $("#comFami").val("SI");
         }
         else {
             $("#bloqueComFam").addClass("d-none");
-            $("#radioCom2").prop("checked", true);
+            $("#comNo").prop("checked", true);
             $("#comFami").val("NO");
         }
     }
     else {
-        $("#radioCom2").prop("checked", true);
+        $("#comNo").prop("checked", true);
         $("#comFami").val("NO");
-        $("#radioCom2").prop("checked", true);
         $("#bloqueComFam").addClass("d-none");
     }
 });
 // Selecciona tipo seguimiento
+$("#comSi").click(function () {
+    if ($("#comSi").is(":checked")) {
+        $("#comFami").val("SI");
+        $(".block1").removeClass("d-none");
+        $(".block2").removeClass("d-none");
+        $(".block3").removeClass("d-none");
+        $("#ndocfam").val("");
+        $("#nombApFam").val("");
+        $("#edadFam").val("");
+        $("#parentFam")[0].selectedIndex = 0;
+        $("#sexFam")[0].selectedIndex = 0;
+        $("#diag1Fam")[0].selectedIndex = 0;
+        $("#diag2Fam")[0].selectedIndex = 0;
+    } else {
+        $("#comFami").val("NO");
+    }
+});
+
+$("#comNo").click(function () {
+    if ($("#comNo").is(":checked")) {
+        $("#comFami").val("NO");
+        $(".block1").addClass("d-none");
+        $(".block2").addClass("d-none");
+        $(".block3").addClass("d-none");
+
+        // Seteo de campos
+        $("#ndocfam").val("");
+        $("#nombApFam").val("");
+        $("#edadFam").val("");
+        $("#parentFam")[0].selectedIndex = 0;
+        $("#sexFam")[0].selectedIndex = 0;
+        $("#diag1Fam")[0].selectedIndex = 0;
+        $("#diag2Fam")[0].selectedIndex = 0;
+    } else {
+        $("#comFami").val("SI");
+    }
+});
+
+
 // Validacion de seleccion de diagnostico
 $("#diagpac1").on("change", function () {
     var existe = $(this).val();
@@ -127,6 +165,105 @@ $("#btnRegistraSeg").on("click", function () {
     var tipoS = $("#tipSeg").val();
 
     if (tipoS == 1) {
+        $("#formSeguimiento").validate({
+            rules: {
+                profPsi: {
+                    valueNotEquals: "0",
+                },
+                ndocpac: {
+                    required: true,
+                },
+                nhispac: {
+                    required: true,
+                },
+                nombApPac: {
+                    required: true,
+                },
+                sexPac: {
+                    valueNotEquals: "0",
+                },
+                edadPac: {
+                    required: true,
+                },
+                diagpac1: {
+                    valueNotEquals: "0",
+                },
+                ndocfam: {
+                    required: true,
+                },
+                nombApFam: {
+                    required: true,
+                },
+                parentFam: {
+                    valueNotEquals: "0",
+                },
+                sexFam: {
+                    valueNotEquals: "0",
+                },
+
+                edadFam: {
+                    required: true,
+                },
+                diag1Fam: {
+                    valueNotEquals: "0",
+                },
+            },
+            messages: {
+                profPsi: {
+                    valueNotEquals: "Seleccione Profesional Psicologo",
+                },
+                ndocpac: {
+                    required: "Ingresa N° Documento del Paciente",
+                },
+                nhispac: {
+                    required: "Ingresa N° Historia del Paciente",
+                },
+                nombApPac: {
+                    required: "Ingresa Nombres y Apellidos de Paciente",
+                },
+                sexPac: {
+                    valueNotEquals: "Seleccione Sexo del Paciente",
+                },
+                edadPac: {
+                    required: "Ingresa Nombres y Apellidos de Paciente",
+                },
+                diagpac1: {
+                    valueNotEquals: "Seleccione al menos un diagnóstico para el paciente",
+                },
+                ndocfam: {
+                    required: "Ingrese N° Documento de familiar",
+                },
+                nombApFam: {
+                    required: "Ingrese Nombres y Apellidos de familiar",
+                },
+                parentFam: {
+                    valueNotEquals: "Seleccione Parentesco",
+                },
+                sexFam: {
+                    valueNotEquals: "Seleccione Sexo de familiar",
+                },
+
+                edadFam: {
+                    required: "Ingrese edad del familiar",
+                },
+                diag1Fam: {
+                    valueNotEquals: "Seleccione al menos un diagnóstico para el familiar",
+                },
+            },
+            errorElement: "span",
+            errorPlacement: function (error, element) {
+                error.addClass("invalid-feedback");
+                element.closest(".form-group").append(error);
+            },
+            highlight: function (element, errorClass, validClass) {
+                $(element).addClass("is-invalid");
+            },
+            unhighlight: function (element, errorClass, validClass) {
+                $(element).removeClass("is-invalid");
+            },
+        });
+    }
+    if ($("#comSi").is(":checked")) {
         $("#formSeguimiento").validate({
             rules: {
                 profPsi: {
@@ -538,10 +675,13 @@ $(".btnRegistraSeg").click(function (e) {
                         timer: 1700,
                     });
                     document.getElementById("formSeguimiento").reset();
-                    $("#radioCom1").prop("checked", false);
-                    $("#radioCom2").prop("checked", true);
-                    $("#comFami").val("NO");
+                    $("#comSi").prop("checked", false);
+                    $("#comNo").prop("checked", true);
+                    $("#comunicaFamilia").val("NO");
                     $("#bloqueComFam").addClass("d-none");
+                    $(".block1").removeClass("d-none");
+                    $(".block2").removeClass("d-none");
+                    $(".block3").removeClass("d-none");
                 } else {
                     Swal.fire({
                         type: "error",
@@ -550,6 +690,14 @@ $(".btnRegistraSeg").click(function (e) {
                         showConfirmButton: false,
                         timer: 1700,
                     });
+                    document.getElementById("formSeguimiento").reset();
+                    $("#comSi").prop("checked", false);
+                    $("#comNo").prop("checked", true);
+                    $("#comunicaFamilia").val("NO");
+                    $("#bloqueComFam").addClass("d-none");
+                    $(".block1").removeClass("d-none");
+                    $(".block2").removeClass("d-none");
+                    $(".block3").removeClass("d-none");
                 }
             },
         });
@@ -563,6 +711,23 @@ $(".btnRegistraSeg").click(function (e) {
             showConfirmButton: false,
             timer: 1500,
         });
+        document.getElementById("formSeguimiento").reset();
+                    $("#comSi").prop("checked", false);
+                    $("#comNo").prop("checked", true);
+                    $("#comunicaFamilia").val("NO");
+                    $("#bloqueComFam").addClass("d-none");
+                    $(".block1").removeClass("d-none");
+                    $(".block2").removeClass("d-none");
+                    $(".block3").removeClass("d-none");
     }
 });
-    // Envío de datos vía ajax
+// Envío de datos vía ajax
+// $("#reservation").daterangepicker({
+//     opens: "left",
+//     maxSpan: {
+//         days: 30,
+//     },
+//     startDate: moment(),
+//     endDate: moment(),
+// }
+// );

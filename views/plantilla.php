@@ -22,8 +22,9 @@
   <!-- iCheck for checkboxes and radio inputs -->
   <link rel="stylesheet" href="views/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
   <link rel="stylesheet" href="views/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
-  <link rel="stylesheet" href="views/plugins/bootstrap-datepicker/bootstrap-datepicker.css">
-  <link rel="stylesheet" href="views/plugins/bootstrap-datepicker/bootstrap-datepicker.min.css.map">
+  <link rel="stylesheet" href="views/plugins//daterangepicker/daterangepicker.css">
+  <!-- <link rel="stylesheet" href="views/plugins/bootstrap-datepicker/bootstrap-datepicker.css">
+  <link rel="stylesheet" href="views/plugins/bootstrap-datepicker/bootstrap-datepicker.min.css.map"> -->
   <link rel="stylesheet" href="views/plugins/toastr/toastr.min.css">
   <!-- Select2 -->
   <link rel="stylesheet" href="views/plugins/select2/css/select2.min.css">
@@ -40,8 +41,8 @@
   <script src="views/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
   <script src="views/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
   <script src="views/plugins/sweetalert2/sweetalert2.min.js"></script>
-  <script src="views/plugins/bootstrap-datepicker/bootstrap-datepicker.js"></script>
-  <script src="views/plugins/bootstrap-datepicker/bootstrap-datepicker.es.min.js"></script>
+  <!-- <script src="views/plugins/bootstrap-datepicker/bootstrap-datepicker.js"></script>
+  <script src="views/plugins/bootstrap-datepicker/bootstrap-datepicker.es.min.js"></script> -->
 
   <script src="views/plugins/toastr/toastr.min.js"></script>
   <script src="views/dist/js/adminlte.min.js"></script>
@@ -54,6 +55,7 @@
   <!-- InputMask -->
   <script src="views/plugins/moment/moment.min.js"></script>
   <script src="views/plugins/inputmask/jquery.inputmask.min.js"></script>
+  <script src="views/plugins/daterangepicker/daterangepicker.js"></script>
 </head>
 
 <body class="hold-transition">

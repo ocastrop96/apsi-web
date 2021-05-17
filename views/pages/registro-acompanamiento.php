@@ -174,22 +174,25 @@
                         <label for="comFam">¿Se realiza comunicación con familiar?</label>
                     </div>
                     <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
-                        <div class="input-group">
+                        <div class="input-group clearfix">
                             <div class="icheck-dark d-inline">
-                                <input type="radio" id="radioCom1" name="comFam" value="SI">
-                                <label for="radiorep1"> SI
-                                </label>&nbsp;&nbsp;
-                            </div>
-                            <div class="icheck-dark d-inline">
-                                <input type="radio" id="radioCom2" name="comFam" value="NO">
-                                <label for="radiorep2"> NO
+                                <input type="radio" id="comSi" name="comunicaFamilia" value="SI">
+                                <label for="comSi">
+                                    SI
                                 </label>
                             </div>
-                            <input type="hidden" name="comFami" id="comFami">
+                            <div class="icheck-dark d-inline">
+                                &nbsp;
+                                <input type="radio" id="comNo" name="comunicaFamilia" value="NO" checked>
+                                <label for="comNo">
+                                    NO
+                                </label>
+                            </div>
                         </div>
+                        <input type="hidden" name="comFami" id="comFami" value="NO">
                     </div>
                 </div>
-                <div class="row">
+                <div class="row block1">
                     <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3">
                         <div class="form-group">
                             <label for="ndocfam">Número de Documento:<span class="text-danger">&nbsp;*</span></label>
@@ -232,7 +235,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row block2">
                     <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3">
                         <div class="form-group">
                             <label for="sexFam">Sexo:<span class="text-danger">&nbsp;*</span></label>
@@ -264,7 +267,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row block3">
                     <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
                         <div class="form-group">
                             <label for="diag1Fam">Diagnóstico 1:<span class="text-danger">&nbsp;*</span></label>
