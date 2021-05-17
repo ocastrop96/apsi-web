@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.0
+-- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3306
--- Tiempo de generación: 14-05-2021 a las 20:13:38
+-- Tiempo de generación: 17-05-2021 a las 12:11:27
 -- Versión del servidor: 5.7.24
--- Versión de PHP: 7.4.15
+-- Versión de PHP: 7.4.13
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -220,40 +220,37 @@ CREATE TABLE `apsi_seguimiento` (
 --
 
 INSERT INTO `apsi_seguimiento` (`idSeguimiento`, `fechaRegSeg`, `tipoSeguimiento`, `idprofesional`, `nroDocPac`, `nroHisPac`, `nombApPac`, `tipSexPac`, `edadPac`, `diag1Pac`, `diag2Pac`, `comFamiliar`, `nroDocFam`, `nombApFam`, `parentFam`, `tipSexFam`, `edadFam`, `diag1Fam`, `diag2Fam`) VALUES
-(1, '2021-04-12', 1, 1, '77478995', '1233466', 'Olger Castro', 1, '25 años', 1, 0, 'NO', NULL, NULL, 0, 0, NULL, 0, 0),
-(2, '2021-03-16', 3, 1, '77478995', '1233466', 'Olger Castro', 1, '25 años', 1, 0, 'NO', NULL, NULL, 0, 0, NULL, 0, 0),
-(3, '2021-05-13', 3, 1, '77478995', '1233466', 'Olger Castro', 1, '25 años', 1, 0, 'NO', NULL, NULL, 0, 0, NULL, 0, 0),
-(4, '2021-02-15', 3, 1, '77478995', '1233466', 'Olger Castro', 1, '25 años', 1, 0, 'NO', NULL, NULL, 0, 0, NULL, 0, 0),
-(5, '2021-05-13', 3, 1, '77478995', '1233466', 'Olger Castro', 1, '25 años', 1, 0, 'NO', NULL, NULL, 0, 0, NULL, 0, 0),
-(6, '2021-05-13', 3, 1, '77478995', '1233466', 'Olger Castro', 1, '25 años', 1, 0, 'NO', NULL, NULL, 0, 0, NULL, 0, 0),
-(7, '2021-05-13', 3, 1, '77478995', '1233466', 'Olger Castro', 1, '25 años', 1, 0, 'NO', NULL, NULL, 0, 0, NULL, 0, 0),
-(8, '2021-05-13', 3, 1, '77478995', '1233466', 'Olger Castro', 1, '25 años', 1, 0, 'NO', NULL, NULL, 0, 0, NULL, 0, 0),
-(9, '2021-05-13', 4, 1, '77478995', '1233466', 'Olger Castro', 1, '25 años', 1, 0, 'NO', NULL, NULL, 0, 0, NULL, 0, 0),
-(10, '2021-05-13', 4, 1, '77478995', '1233466', 'Olger Castro', 1, '25 años', 1, 0, 'NO', NULL, NULL, 0, 0, NULL, 0, 0),
-(11, '2021-05-13', 4, 1, '77478995', '123', 'Olger Ivan Castro Palacios', 1, '25 años', 1, 0, 'NO', NULL, NULL, 0, 0, NULL, 0, 0),
-(12, '2021-05-13', 4, 1, '77478995', '123', 'Olger Ivan Castro Palacios', 1, '25 años', 1, 0, 'NO', NULL, NULL, 0, 0, NULL, 0, 0),
-(13, '2021-05-13', 4, 1, '77478995', '123', 'Olger Ivan Castro Palacios', 1, '25 años', 1, 0, 'NO', NULL, NULL, 0, 0, NULL, 0, 0),
-(14, '2021-05-13', 4, 1, '77478995', '123', 'Olger Ivan Castro Palacios', 1, '25 años', 1, 0, 'NO', NULL, NULL, 0, 0, NULL, 0, 0),
-(15, '2021-05-13', 4, 1, '77478995', '123', 'Olger Ivan Castro Palacios', 1, '25 años', 1, 0, 'NO', NULL, NULL, 0, 0, NULL, 0, 0),
-(16, '2021-05-13', 4, 1, '77478995', '123', 'Olger Ivan Castro Palacios', 1, '25 años', 1, 0, 'NO', NULL, NULL, 0, 0, NULL, 0, 0),
-(17, '2021-05-13', 4, 1, '77478995', '123', 'Olger Ivan Castro Palacios', 1, '25 años', 1, 0, 'NO', NULL, NULL, 0, 0, NULL, 0, 0),
-(18, '2021-05-13', 4, 1, '77478995', '123', 'Olger Ivan Castro Palacios', 1, '25 años', 1, 0, 'NO', NULL, NULL, 0, 0, NULL, 0, 0),
-(19, '2021-05-13', 4, 1, '77478995', '123', 'Olger Ivan Castro Palacios', 1, '25 años', 1, 0, 'NO', NULL, NULL, 0, 0, NULL, 0, 0),
-(20, '2021-05-13', 4, 1, '77478995', '123', 'Olger Ivan Castro Palacios', 1, '25 años', 1, 0, 'NO', NULL, NULL, 0, 0, NULL, 0, 0),
-(21, '2021-05-13', 4, 1, '77478995', '123', 'Olger Ivan Castro Palacios', 1, '25 años', 1, 0, 'NO', NULL, NULL, 0, 0, NULL, 0, 0),
-(22, '2021-05-13', 2, 1, '77478995', '123', 'Olger Ivan Castro Palacios', 1, '25 años', 1, 0, 'NO', NULL, NULL, 0, 0, NULL, 0, 0),
-(23, '2021-05-13', 3, 10, '42162499', '348158', 'William Guerrero Sandoval', 1, '39 AÑOS', 1, 0, 'NO', NULL, NULL, 0, 0, NULL, 0, 0),
-(24, '2021-05-13', 4, 8, '77478995', '1212212', 'Olger Castro', 1, '24 AÑOS', 1, 2, 'NO', NULL, NULL, 0, 0, NULL, 0, 0),
-(25, '2021-05-13', 1, 2, '77478995', '1515151', 'Ocastrop', 1, '25 AÑOS', 1, 2, 'SI', '1515151', 'Jajajaj', 3, 1, '45 AÑOS', 1, 2),
-(26, '2021-05-13', 3, 5, '11', '11', 'Asas', 2, 'A1', 3, 0, 'NO', NULL, NULL, 0, 0, NULL, 0, 0),
-(27, '2021-05-13', 3, 8, '10402790', '15151515', 'Palerma Velazco Castro', 1, '71 AÑOS', 1, 7, 'NO', NULL, NULL, 0, 0, NULL, 0, 0),
-(28, '2021-05-13', 2, 4, '77478995', '111', 'Asas', 1, '25 AÑOS', 1, 0, 'SI', '151551', 'Akakak', 1, 1, 'AJAJ', 1, 0),
-(29, '2021-05-13', 3, 4, '111', '111', 'Asasas', 1, '1QA', 2, 1, 'NO', NULL, NULL, 0, 0, NULL, 0, 0),
-(30, '2021-05-13', 2, 9, '77478995', '1211151', 'Olger Castro', 1, '25 AÑOS', 1, 2, 'SI', '10402790', 'Palerma Velazco', 4, 2, '71 AÑOS', 2, 3),
-(31, '2021-05-13', 3, 5, '77478995', '15151', 'Olger Castro', 1, '25 AÑOS', 1, 2, 'NO', NULL, NULL, 0, 0, NULL, 0, 0),
-(32, '2021-05-14', 1, 4, '11', '11', 'Asas', 1, 'ASAS', 3, 0, 'SI', '111', 'Asasas', 2, 1, 'AASAS', 8, 0),
-(33, '2021-05-14', 4, 2, '454545', '15154', 'Kakak', 1, '254', 1, 2, 'NO', NULL, NULL, 0, 0, NULL, 0, 0),
-(34, '2021-05-15', 4, 2, '111', '1', 'Sasas', 1, 'ASASA', 2, 3, 'NO', NULL, NULL, 0, 0, NULL, 0, 0);
+(1, '2021-05-14', 2, 10, '74642267', '743643', 'Luis Rodriguez Garrafa', 1, '24', 1, 0, 'SI', '06901209', 'Pilar Garrafa Sanchez', 2, 2, '61', 4, 0),
+(2, '2021-05-14', 2, 1, '10743021', '1305560', 'Tony Ruiz Villegas', 1, '43', 5, 0, 'SI', '08131002', 'Joana Deyra Gonzales', 8, 2, '51', 5, 0),
+(3, '2021-05-14', 2, 1, '09045878', '1336172', 'Angel Ataucusi Ludeña', 1, '55', 5, 0, 'SI', '09521648', 'Elena Ataucusi Ludeña', 6, 2, '49', 5, 0),
+(4, '2021-05-14', 2, 1, '09984155', '491430', 'Ynes Rivera Yupanqui', 2, '46', 5, 0, 'SI', '72896185', 'Pamela Critina Tarmeño Rivera', 3, 2, '26', 5, 0),
+(5, '2021-05-14', 2, 1, '06857535', '310793', 'Tomas Corona Castillo', 1, '79', 5, 2, 'SI', '09472422', 'Hilda Maria Coronado Huaman', 3, 2, '53', 2, 0),
+(6, '2021-05-14', 2, 1, '44600766', '1335290', 'Ismael Severino Rivas', 1, '36', 5, 0, 'SI', '80014709', 'Maria Mercedes Bocanegra Rivas', 6, 2, '49', 2, 0),
+(7, '2021-05-14', 2, 1, '09030560', '185789', 'Jorge Monge Muñoz', 1, '68', 5, 0, 'SI', '49739988', 'Lisett Monge Soto', 3, 2, '33', 5, 0),
+(8, '2021-05-14', 2, 1, '48193734', '1335076', 'Edson Zanca Cuadro', 1, '47', 5, 0, 'SI', '4366004', 'Luis Angel Vivanco Cuadro', 6, 1, '35', 5, 0),
+(9, '2021-05-14', 2, 10, '80645612', '1336254', 'Marco Isaias Alva Fano', 1, '41', 4, 0, 'SI', '40196938', 'Edith Castillo Gonzales', 9, 2, '38', 4, 0),
+(10, '2021-05-14', 2, 10, '80645612', '1336254', 'Marco Isaias Alva Fano', 1, '41', 4, 0, 'SI', '40196938', 'Edith Castillo Gonzales', 9, 2, '38', 4, 0),
+(11, '2021-05-14', 2, 10, '07074275', '1335335', 'Carlos Chavez Abanto', 1, '64', 1, 0, 'SI', '47221722', 'Brenda Chavez Giraldo', 3, 2, '25', 4, 0),
+(12, '2021-05-14', 2, 10, '73771531', '1116030', 'Emiliana Quispe Hancco', 2, '24', 2, 0, 'SI', '01552621', 'Flora Hancco Apaza', 7, 2, '43', 4, 0),
+(13, '2021-05-14', 2, 10, '10155015', '1336149', 'Pedro Collantes Carrasco', 1, '47', 4, 0, 'SI', '27746345', 'Elma Garcia Berneo', 9, 2, '38', 4, 0),
+(14, '2021-05-14', 2, 10, '09479847', '1336428', 'Cesar Giron Arteaga', 1, '53', 2, 0, 'SI', '09732019', 'Hayde Jeronimo Carbajal', 9, 2, '45', 4, 0),
+(15, '2021-05-14', 2, 10, '09045878', '1336177', 'Angel Ataucusi Ludeña', 1, '55', 1, 0, 'SI', '74885034', 'Daniel Urrutia Medina', 8, 1, '28', 1, 0),
+(16, '2021-05-14', 2, 10, '06054839', '1335583', 'Maria Giraldo Zanabria', 2, '61', 4, 0, 'SI', '44557018', 'Carlos Chavez Giraldo', 3, 1, '33', 1, 0),
+(17, '2021-05-14', 2, 10, '06823126', '1336372', 'Saul Chuima Ayala', 1, '81', 1, 0, 'SI', '09547020', 'Carmela Chuima Lardizabal', 3, 2, '49', 4, 0),
+(18, '2021-05-15', 2, 8, '06712654', '1335713', 'Cristóbal Cardenio Sánchez Quiroz', 1, '64', 4, 0, 'SI', '48417368', 'Yaruxa Yerlandine Sánchez Ramos', 3, 2, '27', 4, 0),
+(19, '2021-05-15', 2, 8, '03692991', '1197765', 'José Zacarías Coveñas Namuche', 1, '43', 4, 0, 'SI', '80372498', 'María Martha Imán Flores', 9, 2, '42', 1, 0),
+(20, '2021-05-15', 2, 8, '09250003', '1336442', 'Juan José Sandoval Jiménez', 1, '56', 4, 0, 'SI', '43227196', 'Erick Sandoval Vargas', 3, 1, '35', 1, 0),
+(21, '2021-05-15', 2, 8, '10160446', '1334569', 'Rosario Susana Juan Hilario', 2, '63', 4, 0, 'SI', '44869333', 'Blaise Pascal Berru Huaman', 3, 1, '33', 4, 0),
+(22, '2021-05-15', 2, 8, '07815407', '1336381', 'Francisco  Luis Jines Bravo', 1, '64', 4, 0, 'SI', '49586292', 'Carlos Javier Marroquín Buiza', 8, 1, '41', 4, 0),
+(23, '2021-05-15', 2, 8, '1336147', '06733983', 'Julio Dolores Arévalo', 1, '65', 4, 0, 'SI', '06779591', 'Raquel Francisca Dolores Arévalo', 6, 2, '63', 2, 0),
+(24, '2021-05-15', 2, 8, '08750121', '1333492', 'Ines Cuello Aguilar', 2, '56', 4, 0, 'SI', '45103230', 'Andrea Nathaly Mogollón Cuello', 3, 2, '32', 1, 0),
+(25, '2021-05-15', 2, 8, '10391720', '672407', 'Pedro Jacob Guerrero Bello', 1, '44', 4, 0, 'SI', '42368722', 'María Del Pilar Carhuayal Soto', 9, 2, '38', 1, 0),
+(26, '2021-05-15', 2, 8, '10743021', '1305560', 'Tony Ruiz Villegas', 1, '43', 4, 0, 'SI', '08131002', 'Joana Elsa Deyra Gonzáles', 6, 2, '52', 1, 0),
+(27, '2021-05-15', 2, 8, '07059841', '657021', 'Andrés Walter Aguirre Yataco', 1, '62', 4, 0, 'SI', '41773512', 'Christian Andrés Aguirre Saavedra', 3, 2, '38', 1, 0),
+(28, '2021-05-15', 2, 8, '06857535', '310793', 'Tomas Coronado Castillo', 1, '79', 4, 0, 'SI', '09472422', 'Hilda María Coronado Huamsn', 3, 2, '53', 2, 0),
+(29, '2021-05-15', 2, 8, '22977852', '1062807', 'Florentino Huaranga Castañeda', 1, '72', 2, 0, 'SI', '40229921', 'Raquel Corina Huaranga Castro De Nazar', 3, 2, '42', 4, 0),
+(30, '2021-05-16', 3, 3, '77478995', '1515', 'Olger Castro', 1, '25 AÑOS', 1, 2, 'NO', NULL, NULL, 0, 0, NULL, 0, 0),
+(31, '2021-05-16', 4, 5, '77478995', '15151', 'Asas', 1, '55', 1, 2, 'NO', NULL, NULL, 0, 0, NULL, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -373,7 +370,7 @@ ALTER TABLE `apsi_profesionales`
 -- AUTO_INCREMENT de la tabla `apsi_seguimiento`
 --
 ALTER TABLE `apsi_seguimiento`
-  MODIFY `idSeguimiento` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+  MODIFY `idSeguimiento` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT de la tabla `apsi_tiposexo`
